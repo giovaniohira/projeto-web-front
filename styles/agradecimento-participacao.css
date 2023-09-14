@@ -8,11 +8,30 @@
 body{
     background-color: #372775;
     font-family:'Averia Libre';
-    color:aliceblue;
+    color:white;
 }
 
 a {
     color: #3F92C5;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.satisfying {
+    margin-top: -3px;
+    font-size: 40px;
+}
+.sair{
+    text-align: end;
+    margin: 20px 18px;
+    font-size: 24px;
 }
 
 .agradecimento p {
@@ -25,7 +44,7 @@ a {
 }
 
 .agradecimento{
-    height: 525px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,7 +59,7 @@ a {
     flex-direction: column;
     text-align: end;
     justify-content: flex-end;
-    padding: 10px 10px 0 0;
+    padding: 15px 15px 0 0;
     font-size: 16px;
 }
 
