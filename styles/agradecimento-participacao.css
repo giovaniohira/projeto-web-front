@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #372775;
+    font-family:'Averia Libre';
+    color:aliceblue;
+}
+
+a {
+    color: #3F92C5;
+}
+
+.agradecimento p {
+    padding: 40px;
+}
+.sair{
+    text-align: end;
+    padding: 10px 10px 0 0;
+    font-size: 24px;
+}
+
+.agradecimento{
+    height: 525px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+.redirecionar {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    justify-content: flex-end;
+    padding: 10px 10px 0 0;
+    font-size: 16px;
+}
+
+.redirecionar p {
+    color: #888888;
+    padding-top: 10px;
+    margin: 0 10px 10px 0;
+}
