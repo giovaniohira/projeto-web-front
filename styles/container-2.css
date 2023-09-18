@@ -1,0 +1,51 @@
+
+/* Este CSS contém o estilo do conteiner-2, que é uma retangulo transparente
+sem bordas, utilizado na maioria das páginas acoes-pesquisa, coleta e
+agradecimento-participacao. */
+
+#container-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    height: 75vh;
+}
+
+#container-2 a {
+    color: aliceblue;
+}
+
+.botao-acao-pesquisa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #312464;
+    height: 20vw;
+    width: 22vw;
+    font-size: 5vh;
+    border-radius: 20px;
+}
+
+.container-2-texto-principal {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.container-2-texto-ao-lado {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    justify-content: flex-end;
+    font-size: 16px;
+    color: #888888;
+    position: absolute;
+    right: 40px;
+    width: max-content;
+}

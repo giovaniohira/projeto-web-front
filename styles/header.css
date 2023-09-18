@@ -1,0 +1,34 @@
+
+/* Este CSS contém o estilo padrão do header da maioria das páginas. */
+
+header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo {
+    position: relative;
+    left: 80px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+}
+
+#icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sair{
+    position: absolute;
+    right: 5%;
+    font-size: 24px;
+}

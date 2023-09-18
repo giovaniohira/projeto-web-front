@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satisfying.you</title>
-    <link rel="stylesheet" href="..\styles\index.css">
-</head>
-<body>
-    <div class="satisfying">
-        <img src="../images/Vector.png" alt="">
-        <header class="satisfying">Satisfying.you</header>
-    </div>
-    <main class="login">
-        <div class="dados">
-            <p class="login__fazerlogin">Fazer login</p>
-            <form>
-                <p class="login__email">E-mail</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Satisfying.you</title>
+        <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/container-1.css">
+        <link rel="stylesheet" href="../styles/body.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <div id="logo">
+                    <img src="/images/Vector.png" id="icon">
+                    <spam>Satisfying.you</spam>
+                </div>
+            </a>
+        </header>
+        <main class="container-1">
+            <div class="container-1-titulo">
+                <spam>Fazer login</spam>
+            </div>
+            <form class="container-1-form">
+                <label>E-mail</label>
                 <input type="text" name="E-mail">
-                <p class="login__senha">Senha</p>
+                <label>Senha</label>
                 <input type="text" name="Senha">
-                <a class="esqueci__senha" href="">Esqueci minha senha</a>
             </form>
-        </div>
-        <div class="links__embaixo">
-            <a href="">Criar conta</a>
-            <a class="entrar" href="">Entrar</a>
-        </div>       
-    </main>
-</body>
+            <div class="container-1-links-senha-invalida">
+                <spam>E-mail e/ou senha inválidos.</spam>
+                <a href="#">
+                    <spam>Esqueci minha senha</spam>
+                </a>
+            </div>
+            <div class="container-1-botoes">
+                <a href="#">Criar conta</a>
+                <a class="container-1-botao-verde" href="#">Entrar</a>
+            </div>  
+        </main>
+    </body>
 </html>

@@ -1,0 +1,62 @@
+
+/* Este CSS contém o estilo do conteiner-1, que é uma retangulo transparente
+de bordas cinzas com cantos arredondados, utilizado nas páginas index,
+nova-conta, nova-pesquisa, recuperar-senha e modificar-senha. */
+
+.container-1 {
+    position: relative;
+    top: 50px;
+    border: 2px solid gray;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 40px 0px 40px;
+    width: 30vw;
+}
+
+.container-1-titulo {
+    width: 100%;
+    padding: 30px 0px 30px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-1-form {
+    padding: 30px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+input {
+    height: 40px;
+}
+
+.container-1-botoes {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px 50px 0px;
+}
+
+.container-1-botao-verde {
+    display: flex;
+    justify-content: center;
+    color: white;
+    border: 1px solid #37BD6D;
+    border-radius: 10px;
+    width: 130px;
+    background-color: #37BD6D;
+}
+
+.container-1-links-senha-invalida {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: red;
+    font-size: 15px;
+}

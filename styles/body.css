@@ -1,0 +1,20 @@
+
+/* Este CSS contém o estilo padrão do body de todas as páginas. */
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap');
+
+a {
+    color: #3F92C5;
+    text-decoration: none;
+}
+
+body {
+    background-color: #372775;
+    font-family:'Averia Libre';
+    font-size: 30px;
+    color:aliceblue;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
