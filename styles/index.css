@@ -8,7 +8,16 @@ body {
 header {
     font-size: 50px;
 }
-.satisfying {
+
+.satisfying img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.satisfying header {
     position: relative;
     left: 2%;
     margin-bottom: 3%;
@@ -16,6 +25,7 @@ header {
 
 a {
     color: #3F92C5;
+    text-decoration: none;
 }
 
 .login {
@@ -28,6 +38,9 @@ a {
     left: 25%;
     border: 2px solid gray;
     border-radius: 25px;
+}
+
+.dados {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,6 +60,13 @@ input{
     width: 500px; 
 }
 
+.esqueci__senha {
+    display: flex;
+    padding-top: 15px;
+    justify-content: right;
+    font-size: large;
+}
+
 .login__email {
     margin: 0%;
 }
@@ -62,6 +82,18 @@ input{
 
 .links__embaixo {
     padding-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.entrar {
+    display: flex;
+    justify-content: center;
+    color: white;
+    border: 1px solid #37BD6D;
+    border-radius: 10px;
+    width: 130px;
+    background-color: #37BD6D;
 }
 
 form {
