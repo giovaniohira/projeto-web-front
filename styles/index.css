@@ -1,32 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap');
-body {
-    background-color: #372775;
-    font-family:'Averia Libre';
-    color:aliceblue;
-}
-
-header {
-    font-size: 50px;
-}
-
-.satisfying img {
-    float: left;
-    width: 40px;
-    height: 40px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-.satisfying header {
-    position: relative;
-    left: 2%;
-    margin-bottom: 3%;
-}
-
-a {
-    color: #3F92C5;
-    text-decoration: none;
-}
 
 .login {
 
@@ -50,6 +22,7 @@ form{
     position: relative;
     top: -5%;
     width: 500px;
+    padding-bottom: 10%;
 }
 
 input{
@@ -94,8 +67,4 @@ input{
     border-radius: 10px;
     width: 130px;
     background-color: #37BD6D;
-}
-
-form {
-    padding-bottom: 10%;
 }

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap');
+body {
+    background-color: #372775;
+    font-family: 'Averia Libre';
+    color: aliceblue;
+}
+
+header {
+    font-size: 50px;
+}
+
+a {
+    color: #3F92C5;
+    text-decoration: none;
+}
+
+.logo {
+    margin: 20px;
+}
+
+.logo span {
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.sair{
+    text-align: end;
+    margin: 30px 28px;
+    font-size: 24px;
+}
