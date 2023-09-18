@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap');
+
+
+form{
+    position: relative;
+    top: -5%;
+    width: 500px;
+    padding-bottom: 10%;
+}
+
+input{
+    font-family:'Averia Libre';
+    font-size: 25px;
+    height: 35px;
+    width: 500px; 
+}
+
+.criar__conta {
+
+    width: 45%;
+    height: 65%;
+    font-size: 35px;
+    position: relative;
+    top: 20%;
+    left: 25%;
+    border: 2px solid gray;
+    border-radius: 25px;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    margin: 0%;
+}
+
+.fundo {
+    padding-bottom: 10%;
+    display: flex;
+    justify-content:end;
+    padding-right: 10%;
+}
+
+.criar {
+    display: flex;
+    justify-content: center;
+    color: white;
+    border: 1px solid #37BD6D;
+    border-radius: 10px;
+    width: 130px;
+    background-color: #37BD6D;
+}
