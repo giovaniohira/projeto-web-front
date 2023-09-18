@@ -14,33 +14,17 @@ body{
 a {
     color: #3F92C5;
 }
+
 nav{
     display: flex;
-    justify-content: space-between;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-}
-.satisfying {
-    margin-top: -3px;
-    font-size: 40px;
-}
-.sair{
-    text-align: end;
+    flex-direction: column;
     margin: 20px 18px;
     font-size: 24px;
+    text-align: end;
 }
 
 .agradecimento p {
     padding: 40px;
-}
-.sair{
-    text-align: end;
-    padding: 10px 10px 0 0;
-    font-size: 24px;
 }
 
 .agradecimento{
