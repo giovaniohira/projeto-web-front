@@ -1,10 +1,19 @@
 #container-home {
     position: relative;
-    top: calc(50vh - 200px);
-    height: 400px;
-    width: 100vw;
-    overflow-x: scroll;
+    top: calc(50vh - 20vh);
+    height: 42vh;
+    width: calc(100vw - 200px);
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 100px 0px 100px;
+    overflow-x: scroll;
+}
+
+#container-home::-webkit-scrollbar {
+    height: 10px;
+}
+  
+#container-home::-webkit-scrollbar-thumb {
+    background-color: transparent;
 }

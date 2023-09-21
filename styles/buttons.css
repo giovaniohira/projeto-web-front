@@ -58,7 +58,7 @@
     justify-content: center;
     text-align: center;
     background-color: aliceblue;
-    height: 20vw;
+    height: 40vh;
     width: 22vw;
     font-size: 5vh;
     border-radius: 15px;
@@ -66,7 +66,7 @@
     font-family:'Averia Libre';
     font-size: 30px;
     color: aliceblue;
-    margin-left: 100px;
+    margin: 0px 50px 0px 50px;
 }
 
 .botao-home-secao-superior {
