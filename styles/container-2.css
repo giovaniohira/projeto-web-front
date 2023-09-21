@@ -48,3 +48,21 @@ agradecimento-participacao. */
     position: absolute;
     right: 40px;
 }
+
+.container-2-legenda-grafico {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-2-legenda-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+}
+
+.container-2-legenda-item-cor {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
