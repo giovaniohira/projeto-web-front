@@ -42,17 +42,7 @@ input {
     padding: 50px 0px 50px 0px;
 }
 
-.container-1-botao-verde {
-    display: flex;
-    justify-content: center;
-    color: white;
-    border: 1px solid #37BD6D;
-    border-radius: 10px;
-    width: 130px;
-    background-color: #37BD6D;
-}
-
-.container-1-links-senha-invalida {
+.container-1-links-inferiores {
     width: 400px;
     display: flex;
     flex-direction: row;

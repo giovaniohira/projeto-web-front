@@ -1,0 +1,10 @@
+#container-home {
+    position: relative;
+    top: calc(50vh - 200px);
+    height: 400px;
+    width: 100vw;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

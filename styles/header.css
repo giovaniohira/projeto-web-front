@@ -2,19 +2,19 @@
 /* Este CSS contém o estilo padrão do header da maioria das páginas. */
 
 header {
-    position: relative;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
-#logo {
-    position: relative;
-    left: 80px;
+#header-secao-logo {
+    margin-left: 30px;
     font-size: 40px;
     display: flex;
     flex-direction: row;
@@ -27,8 +27,9 @@ header {
     margin-right: 10px;
 }
 
-.sair{
-    position: absolute;
-    right: 5%;
-    font-size: 24px;
+#header-secao-direita {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
