@@ -50,3 +50,8 @@ input {
     color: red;
     font-size: 15px;
 }
+
+.imagem-pesquisa {
+    width: 60%;
+    padding-top: 20px;
+}
