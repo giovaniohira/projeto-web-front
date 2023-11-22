@@ -9,6 +9,34 @@
         <link rel="stylesheet" href="../styles/container-1.css">
         <link rel="stylesheet" href="../styles/body.css">
         <link rel="stylesheet" href="../styles/buttons.css">
+        <script type="text/javascript" href="../javascript/pesquisa.js" >
+
+            arquivoEscolhido = () => {
+                var arquivo = document.getElementById("imagembt").files[0].name;
+
+                document.getElementById("nomeArquivo").value = arquivo;
+                document.getElementById("imagemArquivo").src = URL.createObjectURL(document.getElementById("imagembt").files[0]);
+            }           
+
+            dadosPesquisa = () => {
+            var lista = JSON.parse(window.localStorage.getItem("listaPesquisa"))
+
+                if (!lista) {
+                    lista = [];
+                }
+
+                var nome = document.getElementById("nome").value;
+                var data = document.getElementById("data").value;
+                var imagem = document.getElementById("nomeArquivo").value;
+
+                lista.push({
+                    nome: nome,
+                    data: data,
+                    imagem: imagem
+                })              
+                window.localStorage.setItem("listaPesquisa", JSON.stringify(lista));
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -33,19 +61,20 @@
                 </div>
                 <form class="container-1-form">
                     <label>Nome da pesquisa</label>
-                    <input>
+                    <input id="nome">
                     <label>Data</label>
-                    <input>
-                    <label>Imagem</label>
+                    <input id="data">
+                    <label >Imagem</label>
                     <div style="display: flex; flex-direction: row;">
-                        <input style="width: 60%" value="carnaval2023.jpg">
-                        <button class="botao-cinza" style="width: 40%; margin-left: 10px;">Escolher arquivo</button>
+                        <input type="text" id="nomeArquivo" style="width: 60%;" >
+                        <button class="botao-cinza" style="width: 40%; margin-left: 10px;" onclick="document.getElementById('imagembt').click(); return false;">Escolher arquivo</button>
                     </div>
-                    <img class="imagem-pesquisa" src="../images/carnaval2023.jpg" alt="carnaval2023">
+                    <input type="file" id="imagembt" style="opacity: 0;" accept="image/png, image/jpeg" onchange="arquivoEscolhido()">
+                    <img class="imagem-pesquisa" id="imagemArquivo">
                 </form>
                 <div class="container-1-botoes" style="justify-content: flex-end;">
                     <a href="home.html">
-                        <button class="botao-verde">Criar</button>
+                        <button class="botao-verde" onclick="dadosPesquisa()">Criar</button>
                     </a>
                 </div>
             </div>

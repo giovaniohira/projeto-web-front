@@ -9,6 +9,60 @@
         <link rel="stylesheet" href="../styles/body.css">
         <link rel="stylesheet" href="../styles/container-home.css">
         <link rel="stylesheet" href="../styles/buttons.css">
+        <script type="text/javascript" href="../javascript/pesquisa.js">
+
+            criarPesquisa = (lista) => {
+
+            const novaPesquisa = document.createElement('a');
+            novaPesquisa.href = "acoes-pesquisa.html";
+
+            const divHome = document.createElement('div');
+            divHome.className = "botao-home";
+
+            const divSup = document.createElement('div');
+            divSup.className = "botao-home-secao-superior";
+
+            const divInf = document.createElement('div');
+            divInf.className = "botao-home-secao-inferior";
+
+            var imagemElemento = document.createElement('img');
+            imagemElemento.src = "/images/" + lista.imagem;
+            imagemElemento.width= "180px" 
+            imagemElemento.height= "180px"
+
+            var tituloElemento = document.createElement('span');
+            tituloElemento.className = "botao-home-titulo";
+            tituloElemento.innerHTML = lista.nome;
+
+            var dataElemento = document.createElement('span');
+            dataElemento.className = "botao-home-data";
+            dataElemento.innerHTML = lista.data;
+
+            divSup.appendChild(imagemElemento);
+            divInf.appendChild(tituloElemento);
+            divInf.appendChild(dataElemento);
+            divHome.appendChild(divSup);
+            divHome.appendChild(divInf);
+            novaPesquisa.appendChild(divHome);
+
+            return novaPesquisa;
+            }
+
+            window.onload = () => {
+                var lista = JSON.parse(window.localStorage.getItem("listaPesquisa"));   //pego a lista do local storage
+                for (let pesquisa = 0; pesquisa < lista.length; pesquisa++){    //rodo por toda ela
+                    var novaPesquisa = criarPesquisa(lista[pesquisa])   //adiciono a pesquisa da vez a uma variável
+                    novaPesquisa.id = pesquisa  //adiciono um id a essa pesquisa, o id é o índice do laço for
+                    novaPesquisa.onclick = function () {    //adiciono um evento pra cada vez que o usuário clicar no card da pesquisa
+                        sessionStorage.setItem("chave", pesquisa)   //o índice da pesquisa é adicionado ao session storage pra posterior uso
+                    }
+                    document.getElementById("container-home").appendChild(novaPesquisa) //adiciono o card à tela
+                }
+            }
+
+            
+
+        </script>
     </head>
     <body>
         <header>
