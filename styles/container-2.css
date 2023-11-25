@@ -18,6 +18,7 @@ agradecimento-participacao. */
 
 .container-2-titulo {
     display: flex;
+    height: 85vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;

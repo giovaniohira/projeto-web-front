@@ -21,6 +21,10 @@ header {
     color: aliceblue;
 }
 
+#header-secao-logo svg {
+    margin: 5px 15px 5px 5px;
+}
+
 #icon {
     width: 40px;
     height: 40px;
@@ -32,4 +36,8 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+#sair {
+    justify-content: flex-end;
 }
