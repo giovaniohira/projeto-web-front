@@ -37,6 +37,7 @@ input {
 
 .container-1-botoes {
     width: 400px;
+    margin: 10px;
     display: flex;
     justify-content: space-between;
     padding: 50px 0px 50px 0px;
@@ -51,7 +52,16 @@ input {
     font-size: 15px;
 }
 
+.container-1-imagem-input{
+    display: flex; 
+    flex-direction: row;
+}
+
 .imagem-pesquisa {
     width: 60%;
     padding-top: 20px;
+}
+
+#nomeArquivo {
+    width: 60%;
 }

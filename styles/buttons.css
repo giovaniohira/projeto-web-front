@@ -19,6 +19,8 @@
     font-family:'Averia Libre';
     font-size: 16px;
     color: white;
+    width: 40%; 
+    margin-left: 10px;
     justify-content: center;
     align-items: center;
     background-color: gray;
@@ -41,6 +43,10 @@
     font-family:'Averia Libre';
     font-size: 30px;
     color: aliceblue;
+}
+
+.botao-roxo svg {
+    margin-bottom: 1.8vh;
 }
 
 #botao-apagar {

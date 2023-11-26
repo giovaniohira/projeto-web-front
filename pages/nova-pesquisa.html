@@ -37,16 +37,16 @@
                     <label>Data</label>
                     <input id="data">
                     <label >Imagem</label>
-                    <div style="display: flex; flex-direction: row;">
-                        <input type="text" id="nomeArquivo" style="width: 60%;" >
-                        <button class="botao-cinza" style="width: 40%; margin-left: 10px;" onclick="document.getElementById('imagembt').click(); return false;">Escolher arquivo</button>
+                    <div class="container-1-imagem-input">
+                        <input type="text" id="nomeArquivo">
+                        <button class="botao-cinza"onclick="document.getElementById('imagembt').click(); return false;">Escolher arquivo</button>
                     </div>
                     <input type="file" id="imagembt" style="opacity: 0;" accept="image/png, image/jpeg" onchange="arquivoEscolhido()">
                     <img class="imagem-pesquisa" id="imagemArquivo">
                 </form>
                 <div class="container-1-botoes" style="justify-content: flex-end;">
                     <a href="home.html">
-                        <button class="botao-verde" onclick="dadosPesquisa()">Criar</button>
+                        <button class="botao-verde" id="btCriar">Criar</button>
                     </a>
                 </div>
             </div>
