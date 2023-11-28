@@ -113,3 +113,11 @@
     color: grey;
     font-size: 20px;
 }
+
+@media (max-width: 768px) {
+    .botao-home {
+        margin: 40px;
+        width: 30vw;
+        height: 300px;
+    }
+}

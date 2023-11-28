@@ -41,3 +41,9 @@ header {
 #sair {
     justify-content: flex-end;
 }
+
+@media (max-width: 768px) {
+    header{
+        position: absolute;
+    }
+}
