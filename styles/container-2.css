@@ -67,3 +67,18 @@ agradecimento-participacao. */
     height: 30px;
     margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+    .container-2-conteudo {
+      flex-direction: column;
+      position: relative;
+      height: 80vh;
+      left: 25px;
+      bottom: 30px;
+      scale: 0.9;
+    }
+    #container-2{
+        flex-direction: column;
+        scale: 0.9;
+      }
+}
