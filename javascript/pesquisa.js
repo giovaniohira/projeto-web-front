@@ -3,6 +3,11 @@ if (!lista) {
     lista = [];
 }
 var chave = window.sessionStorage.getItem("chave")
+var vol_pesquisas = window.localStorage.getItem("volPesquisas")
+if(!vol_pesquisas) {
+    window.localStorage.setItem("volPesquisas", "0")
+    vol_pesquisas = 0
+}
 
 if (window.location.href.includes('nova-pesquisa.html')) {
     arquivoEscolhido = () =>{
@@ -24,15 +29,18 @@ if (window.location.href.includes('nova-pesquisa.html')) {
         var data = document.getElementById("data").value;
         var imagem = document.getElementById("imagemArquivo").src;
         var nomeImagem = document.getElementById("nomeArquivo").value
-        var id = window.sessionStorage.getItem("id")
+        var id_usuario = window.sessionStorage.getItem("id_usuario")
         lista.push({
             nome: nome,
             data: data,
             imagem: imagem,
             nomeImagem: nomeImagem,
-            id: id
-        })              
+            id_usuario: id_usuario,
+            id_pesquisa: vol_pesquisas
+        })
+        vol_pesquisas++
         window.localStorage.setItem("listaPesquisa", JSON.stringify(lista));
+        window.localStorage.setItem("volPesquisas", vol_pesquisas)
     }
     arquivoEscolhido()
 }
@@ -77,15 +85,14 @@ if(window.location.href.includes('home.html')){
     window.onload = () => {
         var index_pesquisa = 0
         for (pesquisa of lista){    //rodo por toda ela
-            if(pesquisa.id == window.sessionStorage.getItem("id")) {
+            if(pesquisa.id_usuario == window.sessionStorage.getItem("id_usuario")) {
                 var novaPesquisa = criarPesquisa(pesquisa)   //adiciono a pesquisa da vez a uma variável
-                novaPesquisa.id = pesquisa  //adiciono um id a essa pesquisa, o id é o índice do laço for
                 novaPesquisa.onclick = () => {    //adiciono um evento pra cada vez que o usuário clicar no card da pesquisa
-                    sessionStorage.setItem("chave", index_pesquisa)   //o índice da pesquisa é adicionado ao session storage pra posterior uso
+                    console.log(index_pesquisa)
+                    sessionStorage.setItem("chave", pesquisa.id_pesquisa)   //o índice da pesquisa é adicionado ao session storage pra posterior uso
                 }
                 document.getElementById("container-home").appendChild(novaPesquisa) //adiciono o card à tela
             }
-            index_pesquisa++
         }
     }
 }

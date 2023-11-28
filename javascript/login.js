@@ -25,7 +25,7 @@ if (window.location.href.includes('nova-conta.html')) {
                     {
                         email: email,
                         senha: senha1,
-                        id: vol_users
+                        id_usuario: vol_users
                     }
                 )              
                 window.localStorage.setItem("listaLogin", JSON.stringify(login))
@@ -47,7 +47,7 @@ if (window.location.href.includes('index.html')) {
                     if (senha != user.senha) {
                         aviso_senha_incorreta.style = "display: block"
                     } else {
-                        window.sessionStorage.setItem("id", user.id)
+                        window.sessionStorage.setItem("id_usuario", user.id_usuario)
                         window.location.href = "home.html"
                     }
                 }
