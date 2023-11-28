@@ -28,21 +28,22 @@
                 </div>
                 <form class="container-1-form">
                     <label>E-mail</label>
-                    <input type="text" name="e-mail">
+                    <input type="text" name="e-mail" id="email">
                     <label>Senha</label>
-                    <input type="password" name="senha">
+                    <input type="password" name="senha" id="senha1">
                     <label>Repetir senha</label>
-                    <input type="password" name="senha_2">
+                    <input type="password" name="senha_2" id="senha2">
                 </form>
-                <div class="container-1-links-inferiores">
+                <div class="container-1-links-inferiores" id="aviso-senha-incorreta" style="display: none">
                     <spam>Senhas não conferem</spam>
                 </div>
                 <div class="container-1-botoes" style="justify-content: flex-end;">
-                    <a href="index.html">
-                        <button class="botao-verde">Criar</button>
+                    <a href="#">
+                        <button class="botao-verde" id="criar-conta">Criar</button>
                     </a>
                 </div>
             </div>
         </main>
+        <script type="text/javascript" src="../javascript/login.js"></script>
     </body>
 </html>

@@ -24,12 +24,13 @@ if (window.location.href.includes('nova-pesquisa.html')) {
         var data = document.getElementById("data").value;
         var imagem = document.getElementById("imagemArquivo").src;
         var nomeImagem = document.getElementById("nomeArquivo").value
-
+        var id = window.sessionStorage.getItem("id")
         lista.push({
             nome: nome,
             data: data,
             imagem: imagem,
-            nomeImagem: nomeImagem
+            nomeImagem: nomeImagem,
+            id: id
         })              
         window.localStorage.setItem("listaPesquisa", JSON.stringify(lista));
     }
@@ -37,7 +38,7 @@ if (window.location.href.includes('nova-pesquisa.html')) {
 }
 
 if(window.location.href.includes('home.html')){
-    criarPesquisa = (lista) => {
+    criarPesquisa = (pesquisa) => {
         const novaPesquisa = document.createElement('a');
         novaPesquisa.href = "acoes-pesquisa.html";
         
@@ -53,15 +54,15 @@ if(window.location.href.includes('home.html')){
         const imagemElemento = document.createElement('img');
         imagemElemento.setAttribute("width", "180px")
         imagemElemento.setAttribute("heigth", "180px")
-        imagemElemento.src = lista.imagem;
+        imagemElemento.src = pesquisa.imagem;
         
         var tituloElemento = document.createElement('span');
         tituloElemento.className = "botao-home-titulo";
-        tituloElemento.innerHTML = lista.nome;
+        tituloElemento.innerHTML = pesquisa.nome;
         
         var dataElemento = document.createElement('span');
         dataElemento.className = "botao-home-data";
-        dataElemento.innerHTML = lista.data;
+        dataElemento.innerHTML = pesquisa.data;
         
         divSup.appendChild(imagemElemento);
         divInf.appendChild(tituloElemento);
@@ -74,13 +75,17 @@ if(window.location.href.includes('home.html')){
     }
 
     window.onload = () => {
-        for (let pesquisa = 0; pesquisa < lista.length; pesquisa++){    //rodo por toda ela
-            var novaPesquisa = criarPesquisa(lista[pesquisa])   //adiciono a pesquisa da vez a uma variável
-            novaPesquisa.id = pesquisa  //adiciono um id a essa pesquisa, o id é o índice do laço for
-            novaPesquisa.onclick = function () {    //adiciono um evento pra cada vez que o usuário clicar no card da pesquisa
-                sessionStorage.setItem("chave", pesquisa)   //o índice da pesquisa é adicionado ao session storage pra posterior uso
+        var index_pesquisa = 0
+        for (pesquisa of lista){    //rodo por toda ela
+            if(pesquisa.id == window.sessionStorage.getItem("id")) {
+                var novaPesquisa = criarPesquisa(pesquisa)   //adiciono a pesquisa da vez a uma variável
+                novaPesquisa.id = pesquisa  //adiciono um id a essa pesquisa, o id é o índice do laço for
+                novaPesquisa.onclick = () => {    //adiciono um evento pra cada vez que o usuário clicar no card da pesquisa
+                    sessionStorage.setItem("chave", index_pesquisa)   //o índice da pesquisa é adicionado ao session storage pra posterior uso
+                }
+                document.getElementById("container-home").appendChild(novaPesquisa) //adiciono o card à tela
             }
-            document.getElementById("container-home").appendChild(novaPesquisa) //adiciono o card à tela
+            index_pesquisa++
         }
     }
 }

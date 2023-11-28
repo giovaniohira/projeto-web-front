@@ -25,22 +25,23 @@
             </div>
             <form class="container-1-form">
                 <label>E-mail</label>
-                <input type="text" name="E-mail">
+                <input type="text" name="E-mail" id="email">
                 <label>Senha</label>
-                <input type="text" name="Senha">
+                <input type="text" name="Senha" id="senha">
             </form>
             <div class="container-1-links-inferiores">
-                <spam>E-mail e/ou senha inválidos.</spam>
+                <spam id="aviso-senha-incorreta" style="display: none;">E-mail e/ou senha inválidos.</spam>
                 <a href="recuperar-senha.html">
                     <spam>Esqueci minha senha</spam>
                 </a>
             </div>
             <div class="container-1-botoes">
                 <a href="nova-conta.html">Criar conta</a>
-                <a href="home.html">
-                    <button class="botao-verde">Entrar</button>
+                <a href="#">
+                    <button class="botao-verde" id="entrar">Entrar</button>
                 </a>
             </div>  
         </main>
+        <script type="text/javascript" src="../javascript/login.js"></script>
     </body>
 </html>
